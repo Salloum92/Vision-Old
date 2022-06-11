@@ -8,28 +8,41 @@
   user-select: none;
   -webkit-appearance: none;
   outline: none;
-  border-radius: 0;
-  border: none;
   text-rendering: optimizeLegibility;
+  font-family: Gracheva;
 }
-
+@font-face {
+  font-family: esthetique;
+  src: url("font/esthetique.otf");
+}
 body {
-  font-family: "ROBOTO", sans-serif;
+  font-family: Gracheva;
   text-rendering: optimizeLegibility;
   touch-action: none;
   clear: both;
-  background-color: #fff7ec;
+  background-color: #fdf8f1;
   
 }
 
-/*HAMBURGER MENU*/
 .hamburger {
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #283b8b;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
   display: none;
-  font-size: 24px;
-  user-select: none;
-  height: 50px;
 }
 
+.hamburger:hover {
+  background-color: #2642af;
+}
 /*Start Mutual*/
 
 
@@ -142,7 +155,7 @@ footer .newsletter i,
 .background{
   height: calc(100vh - 22px);
     background-size: cover;
-    background-image: url("images/back.jpeg");
+    background-image: url("images/2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 20px 70px;
@@ -151,10 +164,10 @@ footer .newsletter i,
 /*Start Header*/
 
 header nav {
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
   position: fixed;
   top: 0;
-  padding: 15px;
+  padding-top:25px;
   z-index: 20;
   background-color: #000000;
   color: white;
@@ -163,6 +176,8 @@ header nav {
 header nav .logo {
   flex-basis: 56%;
   padding-left: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 header .navigation-bar.show {
@@ -178,9 +193,11 @@ header .navigation-bar.show a:hover {
 }
 header .navigation-bar ul{
   list-style: none;
+  text-align: center;
 }
 header .navigation-bar ul li {
   flex: 1;
+  text-align: center;
   padding: 0 10px;
   width: 120px;
 }
@@ -231,7 +248,7 @@ header .arrow-down {
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 24px;
-  font-family: 'Pacifico', cursive;
+  font-family:esthetique ;
   font-size: 6px;
   text-align: center;
   text-decoration: none;
@@ -244,7 +261,7 @@ header .arrow-down {
 
 .card__text-sm {
   color: #fff;
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
   font-size: 10px;
   margin: 0;
   padding: 16px 0 8px;
@@ -262,7 +279,7 @@ header .arrow-down {
 
 .card__text-lg {
   color: #fff;
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
   font-size: 18px;
   font-weight: 300;
   text-transform: uppercase;
@@ -273,7 +290,7 @@ header .arrow-down {
 
 /*...large...*/
 .card-lg__container {
-  margin: -200px 0 0 0 ;
+  margin: -175px 0 0 0 ;
   display: flex;
   width: 450px;
   flex-direction: column;
@@ -281,7 +298,7 @@ header .arrow-down {
 }
 
 .card__text-lg {
-font-family: 'Pacifico', cursive;
+font-family: esthetique;
   font-size: 40px;
   font-weight: 400;
   letter-spacing: 1.4px;
@@ -289,7 +306,7 @@ font-family: 'Pacifico', cursive;
 
 .card__text-md {
   color: #fff;
-font-family: 'Pacifico', cursive;
+font-family: esthetique;
   font-size: 10px;
   font-weight: 100;
   line-height: 1.5;
@@ -364,7 +381,7 @@ font-family: 'Pacifico', cursive;
   margin: 0;
   padding-bottom: 0.5rem;
   letter-spacing: 0.3rem;
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique ;
   color: #000000;
   transition: all 0.3s ease;
   z-index: 3; 
@@ -376,7 +393,7 @@ h1:hover {
 .slider h2 {
   font-size: 2vw;
   letter-spacing: 0.3rem;
-  font-family: myFirstFont;
+  font-family: esthetique;
   font-weight: 300;
   color: #faebd7;
   z-index: 4;
@@ -415,12 +432,13 @@ a {
 }
 
 .footer {
+  font-family: esthetique;
   text-align: left;
   display: flex;
   flex-flow: row wrap;
   padding: 30px 30px 20px 30px;
   color: #2f2f2f;
-  background-color: #fff;
+  background-color: #fff7ec;
   border-top: 1px solid #e5e5e5;
 }
 
@@ -434,7 +452,7 @@ a {
 }
 
 .footer__logo {
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
   font-weight: 400;
   color: #000;
   text-transform: lowercase;
@@ -454,11 +472,11 @@ a {
 
 .footer address {
   font-style: normal;
-  color: #999;
+  color: black;
 }
 
 .footer__btn {
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -508,7 +526,7 @@ a {
 
 .legal {
   text-align: center;
-  color: rgb(68, 67, 67);
+  color:black;
 
 }
 
@@ -539,14 +557,14 @@ a {
   display: inline-block;
   text-align: center;
   color: #ffffff;
-  background-color: #0a0806;
+  background-color: #000000;
   border-radius: 24px;
 }
 
 
 /* --------------- Contact Detiles --------------*/
 #tab-contact a{
-   font-family: 'Pacifico', cursive;
+   font-family: esthetique;
     position: relative;
     display: inline-block;
     padding: 25px 30px;
@@ -703,9 +721,7 @@ transition: transform .6s 1s;
   top: 0;
   left: 0;
   overflow: hidden;
-
   backface-visibility: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -752,7 +768,7 @@ figcaption {
   margin-top: 10%;
   padding: 4px 22px;
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: esthetique;
   line-height: 1.6;
   letter-spacing: 2px;
   word-spacing: 6px;
@@ -774,12 +790,10 @@ figcaption {
 
 .card-front .img-bg::before {
   content: "";
-
   position: absolute;
   top: 34%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(18deg);
-
   width: 100%;
   height: 6px;
   border: 1px solid var(--primary);
@@ -814,12 +828,12 @@ figcaption {
   max-width: 100rem;
   margin: 0 auto;
   padding: 0 2rem 2rem;
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
 }
 
 
 .container_gallery h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: esthetique;
   font-size: 4rem;
   font-weight: 500;
   line-height: 1.5;
@@ -1145,186 +1159,42 @@ h3 {
 }
 
 /*  ======================== Mobile ==================================*/
-@media (max-width: 1200px) {
-
-  .menu,
-  .about-us,
-  .reservation {
-    padding: 60px 40px;
-  }
-
-  .about-us .text,
-  .reservation .text {
-    padding: 0 32px 0 0;
-  }
-
-  .about-us .image-container,
-  .reservation .image-container {
-    align-items: center;
-  }
-
-  .menu .text {
-    padding: 0 0 0 32px;
-  }
-}
-
-@media (max-width: 992px) {
-  body {
-    padding: 0;
-  }
-
-  .dots {
-    display: none;
-  }
-
-  header {
-    height: calc(100vh - 10px);
-  }
-
-  header nav .logo {
-    padding-left: 0;
-  }
-
-  .about-us {
+@media screen and (max-width: 768px) {
+  .hamburger {
     display: block;
-    padding-top: 50px;
   }
-
-  .about-us .text,
-  .reservation .text {
-    padding: 0 0 40px;
-  }
-
-  .about-us .image-container .image1,
-  .reservation .image-container .image1 {
-    margin-left: 0;
-  }
-
-  .menu {
-    display: block;
-    padding: 60px 20px 60px 40px;
-  }
-
-  .menu .text {
-    padding: 20px 20px 0 0;
-  }
-
-  .reservation {
-    display: block;
-    padding: 30px 20px 60px;
-  }
-
-  .contact {
-    display: block;
-    padding: 78px 20px;
-  }
-
-  .contact .form {
-    margin-left: 0;
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  header nav {
-    display: block;
-    text-align: center;
+  .navigation-bar ul {
+       display: none;
+     }
+  .navigation-bar ul {
+    position: absolute;
+    top: 60px;
     left: 0;
-    top: 0;
+    flex-direction: column;
     width: 100%;
-    padding-top: 25px;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
   }
-
-  header nav .toggle {
-    display: block;
+    
+  .navigation-bar li {
+    text-align: center;
+    margin: 0;
   }
-
-  header .navigation-bar {
-    position: fixed;
-    top: 0;
-    left: -174px;
-    height: 100%;
-    background-color: #262526;
-    overflow: hidden;
-    z-index: 20;
-    padding: 40px;
+    
+  .navigation-bar li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
   }
-
-  header .navigation-bar ul {
-    display: block;
-    padding-top: 40px;
+    
+  .navigation-bar li:hover {
+    background-color: #eee;
   }
-
-  header .navigation-bar ul li {
-    text-align: left;
-    padding: 14px 0;
-  }
-
-  footer .contact-container {
-    display: block;
-  }
-
-  footer .social-media {
-    margin-bottom: 40px;
-  }
-
-  .copyright ul {
-    display: block;
-    margin-top: -20px;
-  }
-
-  .copyright li {
-    margin-bottom: 5px;
-  }
-
-  .copyright li:not(:last-of-type):after {
-    content: '';
-  }
-
-}
-
-@media (max-width: 576px) {
-
-  h3,
-  h1 {
-    font-size: 40px;
-  }
-
-  h2 {
-    font-size: 90px
-  }
-
-  header {
-    padding: 0;
-  }
-
-  header nav .logo {
-    padding-left: 0;
-  }
-
-  header nav .toggle.active {
-    left: 36%;
-  }
-
-  header .navigation-bar.show {
-    padding: 20px;
-    width: 48%;
-  }
-
-  .about-us,
-  .reservation {
-    padding: 60px 20px;
-  }
-
-  .menu {
-    padding: 60px 0 60px 20px;
-  }
-
-    .hamburger {
+    .navigation-bar.expanded ul {
       display: block;
     }
 }
-
 /*End Home Page Responsive*/
 /* ------------------------- CV ---------------------------- */
 
