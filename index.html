@@ -28,12 +28,12 @@
           <input type="checkbox" id="checkbox_toggle" />
           <label for="checkbox_toggle" class="hamburger">&#9776;</label>
           <li class="active"><a href="index.html">Home<span class="underline"></span></a></li>
-          <li><a href="#">IT<span class="underline"></span></a></li>
-          <li><a href="#">Architecture<span class="underline"></span></a></li>
-          <li><a href="#">Graphic Design<span class="underline"></span></a></li>
-          <li><a href="#">Interior Design<span class="underline"></span></a></li>
-          <li><a href="#">Group Staff<span class="underline"></span></a></li>
-          <li><a href="#">Contact<span class="underline"></span></a></li>
+          <li><a href="IT.html">IT<span class="underline"></span></a></li>
+          <li><a href="Architecture.html">Architecture<span class="underline"></span></a></li>
+          <li><a href="Graphic.html">Graphic Design<span class="underline"></span></a></li>
+          <li><a href="Interior.html">Interior Design<span class="underline"></span></a></li>
+          <li><a href="#tab-staff">Group Staff<span class="underline"></span></a></li>
+          <li><a href="#footer">Contact<span class="underline"></span></a></li>
         </ul>
       </div>
     </nav>
@@ -197,7 +197,7 @@
   
     <div class="tile">
       <img
-        src='https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?dpr=1&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80' />
+        src='images/about us.jpg' />
       <div class="text">
         <h1>Lorem ipsum.</h1>
         <h2 class="animate-text">More lorem ipsum bacon ipsum.</h2>
@@ -420,6 +420,20 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+  $(document).ready(function () {
+      $(document).delegate('.navigation-bar', 'click', function (event) {
+        $(this).addClass('oppenned');
+        event.stopPropagation();
+      })
+      $(document).delegate('body', 'click', function (event) {
+        $('.open').removeClass('oppenned');
+      })
+      $(document).delegate('.cls', 'click', function (event) {
+        $('.open').removeClass('oppenned');
+        event.stopPropagation();
+      });
+    });
+</script>
 </body>
 </html>

@@ -11,10 +11,25 @@
   text-rendering: optimizeLegibility;
   font-family: Gracheva;
 }
+:root {
+  --background-dark: #fdf8f1;
+  --text-light: rgba(255, 255, 255, 0.6);
+  --text-lighter: rgba(255, 255, 255, 0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
 @font-face {
   font-family: esthetique;
   src: url("font/esthetique.otf");
 }
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Gracheva;
   text-rendering: optimizeLegibility;
@@ -167,7 +182,7 @@ header nav {
   font-family: esthetique;
   position: fixed;
   top: 0;
-  padding-top:25px;
+  padding-top:20px;
   z-index: 20;
   background-color: #000000;
   color: white;
@@ -176,6 +191,7 @@ header nav {
 header nav .logo {
   flex-basis: 56%;
   padding-left: 50px;
+  margin-top: -10px;
   height: 40px;
   width: 40px;
 }
@@ -806,8 +822,166 @@ figcaption {
 .card-back .img-bg {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 60%);
 }
+/* ------------------------- Group Staff Gallery ----------- */
+.about__section {
+  width: 100%;
+  margin: auto;
+  font-family: esthetique;
+  display: block;
+  text-align: center;
+}
 
+.about__section .about__slot {
+  width: 33%;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  /*border:1px solid #ccc;*/
+  border-right: none;
+  border-top: none;
+  height: 15vw;
+  min-height: 300px;
+  min-width: 220px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  background-size: 0% auto;
+  -webkit-transition: all 0.3s linear;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
 
+.about__slot .bioText {
+  opacity: 0;
+  color: rgba(242, 242, 242, 0);
+  pointer-events: none;
+  position: absolute;
+  top: 350px;
+  left: 0;
+  right: 0;
+  padding: 10%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 80%;
+  height: 0;
+  -webkit-transition: all 0.3s linear;
+  margin: auto;
+}
+
+.about__slot.bio .about__info {
+  top: 0px;
+  bottom: 220px;
+  background-color: rgba(0, 0, 0, 0.42);
+  box-shadow: inset 0px -5px 10px 0 rgba(0, 0, 0, 1);
+}
+
+.about__slot.bio .bioText {
+  opacity: 1;
+  border-radius: 0;
+  position: absolute;
+  top: 50px;
+  padding-top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  height: 250px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(42, 42, 42, 0.7);
+  z-index: 8;
+  margin: auto;
+  font-family: sans-serif;
+  overflow: auto;
+}
+
+.about__slot .about__info {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 225px;
+  right: 0;
+  pointer-events: none;
+  z-index: 9;
+  -webkit-transition: all 0.3s linear;
+
+}
+
+/*BOOM */
+.about__slot .headshot {
+  margin: auto;
+  margin-top: 19px;
+  width: 172px;
+  height: 172px;
+  /*border:10px double #424242;*/
+  background-size: 200px 200px;
+  background-position: center 15%;
+  border-radius: 100%;
+  box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.42);
+  -webkit-transition: all 0.1s ease-in-out;
+}
+
+.about__slot.bio .headshot {
+  -webkit-filter: blur(3px);
+  opacity: 1;
+  width: 100%;
+  height: 300px;
+  border-radius: 0;
+  margin-top: 0;
+  background-size: 375px 375px !important;
+  border: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+}
+
+.about__slot .name {
+  font-family: "Typo Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #424242;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  -webkit-transition: all 0.3s linear;
+}
+
+.about__slot .title {
+  font-family: "Typo Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #ccc;
+  -webkit-transition: all 0.3s linear;
+}
+
+.about__slot.bio .name {
+  color: #f5f5f5;
+}
+
+.about__section .about__slot:hover .headshot {
+  opacity: 1;
+  width: 100%;
+  height: 300px;
+  border-radius: 0;
+  margin-top: 0;
+  background-size: 325px 325px;
+  border: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.about__section .about__slot:hover .name {
+  color: #f5f5f5 !important;
+}
+
+.about__section .about__slot:hover .about__info {
+  background-color: rgba(0, 0, 0, 0.42);
+}
 /* ------------------------- CV ---------------------------- */
 .cv{
   text-align: center;
@@ -1060,10 +1234,14 @@ h3 {
 
 .heading {
   text-align: center;
-  font-size: 2.0em;
-  letter-spacing: 1px;
-  padding: 40px;
-  color: white;
+    font-size: 7vw;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.3rem;
+    font-family: esthetique;
+    color: #000000;
+    transition: all 0.3s ease;
+    z-index: 3;
 }
 
 .gallery-image {
@@ -1147,7 +1325,95 @@ h3 {
     width: 400px;
   }
 }
+/* ---------------- Gallery Blur ----------*/
+.hero-section {
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #fdf8f1 0%, #fdf8f1 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 960px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  list-style: none;
+  position: relative;
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  trsnsform: scale(1) translateZ(0);
+  transition:
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background {
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover>.card:not(:hover) .card__background {
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
 /* ---------------- Btn CV --------------- */
 
 .btn_cv{
