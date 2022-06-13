@@ -1,0 +1,12 @@
+/*  ======================== Mobile ==================================*/
+#navbar .navigation-bar .toggle {
+    display: block;
+}
+#navbar .navigation-bar .menu >div >div > ul{
+    display: block;
+}
+
+#navbar .navigation-bar .menu >div >div >ul > li:first-child >a ,
+#navbar .navigation-bar .menu >div >div >ul > li >a:hover{
+    background: none;
+}
